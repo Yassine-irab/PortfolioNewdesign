@@ -1,0 +1,836 @@
+/*
+  ***
+  ****
+  *****                      Creating a font style for the page'
+  ******                     ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+  ****
+  ***
+*/
+
+@font-face {
+    font-family: "PoppinsBold";
+    src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+  
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+  
+ @font-face {
+    font-family: "PoppinsThin";
+    src: url("../fonts/Poppins/Poppins-Thin.ttf");
+}
+  
+@font-face {
+    font-family: "roboto-light";
+    src: url("../fonts/roboto/Roboto-Light.ttf");
+}
+  
+@font-face {
+    font-family: "roboto-Regular";
+    src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+  
+@font-face {
+    font-family: "roboto-Medium";
+    src: url("../fonts/roboto/Roboto-Medium.ttf");
+}
+  
+@font-face {
+    font-family: "roboto-Bold";
+    src: url("../fonts/roboto/Roboto-Bold.ttf");
+}
+  
+@font-face {
+    font-family: "bigNoodleTitling";
+    src: url("../fonts/bigNoodleTitling.ttf");
+}
+
+$fontBold: "PoppinsBold", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$fontRegular: "PoppinsRegular", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$fontlight: "roboto-light", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$fontMedium: "roboto-Medium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+$white: #fff;
+$black: #000;
+$gray: #696969;
+$blue: #5c6ac4;
+$lightBlue: #e9ebf4;
+
+
+/*
+  **
+  ****
+  *****
+  *******                   Starting Styling in The CSS File '../css/style.css'
+  *****                     ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+  ****
+  **
+  */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+*::selection,
+*::-moz-selection {
+    background-color: #4a4a4a;
+    color: $white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $blue; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $blue; 
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: static !important;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.gatsby-image-wrapper {
+    width: 100% !important;
+}
+.gatsby-image-wrapper picture img{
+
+    min-height: 15rem;
+    max-height: 15rem;
+    background: #fff center center no-repeat;
+    background-size: cover;
+
+}
+a {
+    text-decoration: none;
+    outline: none;
+    color: $blue;
+}
+
+body {
+    font-family: $fontlight;
+    margin: 0;
+    background: $white;
+    /*opacity: 0;*/
+    -webkit-transition: opacity 3s ease;
+    transition: opacity 3s ease;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+.contain {
+    width: 85%;
+    margin: 30px auto;
+    height: 100%;
+    display: block;
+}
+  
+.clear {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.active-links {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #141414;
+    transition: all ease 0.3s;
+    color: $white !important;
+}
+
+.greyBack {
+    background-color: #F9F9F9;
+    overflow: hidden;
+    padding: 7em 0;
+  }
+
+/*
+  ***
+  ****
+  *****                      Start stiyling the header section // Set a Image for the header
+  ******                     ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+  ****
+  ***
+*/
+
+.btn {
+    padding: 20px;
+    font-family: $fontMedium;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 600;
+    background-color: $lightBlue;
+    color: $blue;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: block;
+    width: 30%;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all ease-in-out .3s;
+    &:hover {
+        -webkit-box-shadow: 0 10px 20px -5px #ccc;
+        -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+        transform: translateY(-1px);
+        -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        color: $white;
+        background-color: $blue;   
+    }
+}
+
+.liststyle {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+  
+.logo.design {
+    display: inline-block;
+    vertical-align: middle;  
+}
+
+.standard {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    text-align: right;           
+}
+  
+.standard {
+    ul {
+        li {
+            display: inline-block;
+            list-style-type: none;
+        }
+    }
+}
+  
+.standard {
+    ul {
+        li {
+            a {
+                position: relative;
+                font-family: $fontBold;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 12px;
+                color: $black;
+                padding: 12px 20px;
+            }
+        }
+    }
+}
+  
+.standard {
+    ul {
+        .underMore {
+            a {
+                font-family: $fontlight;
+                font-weight: 100 !important;
+                color: $blue;
+                text-transform: capitalize !important;
+            }
+        }
+    }
+}
+  
+.navbar-change {
+    z-index: 9999;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s
+}
+  
+.logo {
+    a {
+        font-family: $fontlight;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $black;
+        letter-spacing: 0px;
+        line-height: 20px;
+        display: block;
+    }
+}
+
+.logo {
+    opacity: 1;
+    transition: 1s;
+}
+
+.logo{
+    &:hover {
+        opacity: .3;
+    }
+}
+
+.logo {
+    span {
+        display: block;
+        font-family: $fontBold;  
+    }
+}
+
+.link-1::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 0%;
+    left: 0;
+    bottom: 0;
+    background-color: $blue;
+    transition: all ease 0.3s;
+}
+  
+.link-1 {
+    &:hover {
+        color: $white !important;
+    }
+}
+  
+.link-1 {
+    &:hover::after {
+        height: 100%;
+    }
+}
+
+// Styling the main sqection Body
+
+#showcase {
+    background-image: url("../images/mainImageHeader.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+  }
+  
+#showcase {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #F9F9F9;
+        top: 0;
+        right: 47%;
+        transform: rotate(17deg);
+        border-radius: 36%;
+        z-index: 0;
+    }
+}
+
+.content-header {
+    display: table;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 999;
+}
+
+  
+.title-content {
+    font-family: $fontBold;
+    font-size: 90px;
+    line-height: 90px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $black;
+    margin-bottom: 40px;
+}
+  
+.title-content {
+    &::after {
+        content: '';
+        display: block;
+        width: 10%;
+        height: 6px;
+        background-color: $blue;
+        margin-top: 20px;
+        border-radius: 3px;
+    }
+}
+  
+.content {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    top: 40px;
+}
+  
+.body-content {
+    font-family: $fontlight;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 35px;
+    font-weight: 100;
+    color: $gray;
+    margin-bottom: 40px;
+}
+  
+.btn-download {
+    margin-bottom: 40px;
+}
+  
+.scrollArrow {
+    position: absolute;
+    bottom: 30px;
+    width: 25px;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scrollArrow .iconArrow {
+    display: block;
+    background-image: url("../images/BottomArrow.png");
+    background-position: center;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+}
+
+
+/*
+    Section about me style *****
+*/
+
+
+/* Card list here */
+/* Lazy Load Styles */
+
+.card-image {
+    display: block;
+    min-height: 15rem;
+    max-height: 15rem;
+    /* layout hack */
+    background: $white center center no-repeat;
+    background-size: cover;
+    opacity: 1;
+    overflow: hidden;
+    &:hover { opacity: .9; }
+
+}
+    
+.card-image {
+    &> img  {
+        display: block;
+        width: 100%;
+        opacity: 0;
+        /* visually hide the img element */
+    }
+}
+
+.card-image {
+    .is-loaded {
+        -webkit-filter: none;
+        filter: none;
+        /* remove the blur on fullres image */
+        -webkit-transition: -webkit-filter 1s;
+        transition: -webkit-filter 1s;
+        transition: filter 1s;
+        transition: filter 1s, -webkit-filter 1s;
+    }
+}
+
+/* Layout Styles */
+.card-list {
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+    li {
+        border-radius: 4px;
+        border: 1px solid #eaeaea;
+        background-color: #fff;
+    }    
+}
+  
+.card {
+    display: inline-block;
+    width: 40%;
+    /*max-width: 11rem;*/
+    margin: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: left;
+    padding: 40px; 
+    background-image: none;   
+    /*  -webkit-box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+        box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);*/
+    -webkit-transition: all 0.1s ease-in-out, -webkit-box-shadow 0.1s;
+    transition: all 0.1s ease-in-out, -webkit-box-shadow 0.1s;
+    &:hover {
+        -webkit-box-shadow: 0 10px 20px -5px #ccc;
+        -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+        transform: translateY(-1px);
+        -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+
+        .card-description {
+            > p , > h2{
+                color: $white;
+            }
+        }   
+
+    }    
+}
+  
+.card-description {
+    display: block;
+    color: $gray;
+    text-decoration: none;
+    &> h2 {
+        font-family: $fontRegular;
+        letter-spacing: 1px;
+        line-height: 35px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $black;
+    }
+    &> p {
+        margin: 0;
+        font-family: $fontlight;
+        font-size: 14px;
+        cursor: default;
+        line-height: 22px;
+        font-weight: 100;    
+        color: $gray;
+    }    
+}
+
+  
+.card:nth-child(1):hover {
+    background-image: -webkit-linear-gradient(330deg,rgba(87,82,208,.6) 0%,#5752d0);
+    background-image: -o-linear-gradient(330deg,rgba(87,82,208,.6) 0%,#5752d0);
+    background-image: linear-gradient(120deg,rgba(87,82,208,.6) 0%,#5752d0);
+    -webkit-box-shadow: 0 10px 19px 1px rgba(87,82,208,.2);
+    box-shadow: 0 10px 19px 1px rgba(87,82,208,.2);  
+} 
+  
+.card:nth-child(2):hover {
+    background-image: linear-gradient(120deg,rgba(222,54,24,.6) 0%,#de3618);
+    box-shadow: 0 10px 19px 1px rgba(222,54,24,.2); 
+} 
+  
+.card:nth-child(3):hover {
+  background-image: linear-gradient(120deg,rgba(156,106,222,.6) 0%,#9c6ade);
+  box-shadow: 0 10px 19px 1px rgba(156,106,222,.2); 
+}
+  
+.card:nth-child(4):hover {
+  background-image: linear-gradient(120deg,rgba(71,193,191,.6) 0%,#47c1bf);
+  box-shadow: 0 10px 19px 1px rgba(71,193,191,.2);
+}
+  
+.SectionAboutme , .SectionBlog {
+    .leftAboutme , .rightAboutme , 
+    .leftBlog , .rightBlog{
+        float: left;
+        width: 40%;        
+    }
+}
+
+.SectionAboutme {
+    .card-image {
+        min-height: 5rem;
+        max-height: 5rem;
+        background: transparent left center no-repeat;
+    }
+}
+  
+.rightAboutme , .leftBlog{
+    h2 {
+        font-family: $fontBold,arial,sans-serif;
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: $black;
+        &::after {
+            content: '';
+            display: block;
+            width: 10%;
+            height: 6px;
+            background-color: $blue;
+            margin-top: 20px;
+            border-radius: 3px;
+        }        
+    }
+}
+  
+.rightAboutme {
+    .bodytextAbout {
+        font-family: $fontlight;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 100;
+        color: $gray;
+        p {
+            margin-bottom: 40px;
+        }
+        a {
+            font-weight: 600;
+        }
+    }
+}
+
+
+
+.SectionBlog {
+  overflow: hidden;
+  padding: 7em 0;
+  .rightBlog {
+    width: 50%;
+    .card {
+        padding: 0;
+        width: 30%;
+        &:hover {
+            background-image: none !important;
+        }        
+    }
+    .card-description {
+        padding: 20px;
+        /*min-height: 8em;*/
+        &> h2 {
+            line-height: 25px;
+        } 
+    }
+  }
+}
+
+.leftBlog {
+    p {
+        font-family: $fontlight;
+        font-size: 18px;
+        max-width: 28rem;  
+        margin-bottom: 40px;
+        line-height: 30px;
+        font-weight: 100;
+        color: $gray;  
+    }
+}
+
+.rightBlog {
+    .card {
+        &:hover {
+            .card-description {
+                &> p , > h2{
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.SectionSkills {
+    padding: 8em 0 5em;
+    .titleSkills {
+        display: inline-block;
+        width: 40%;
+    }
+}
+  
+.skills {
+    .row {
+        width: 100%;
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex; 
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+        justify-content: center;
+        overflow: hidden;
+        .skill-item {
+            margin: 0px 40px;
+        }
+    }
+}
+
+.SectionSkills {
+    .skill-item {
+        .item-icon {
+            margin: 0 auto;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            opacity: .7;
+            -webkit-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+            cursor: pointer;
+            width: 100px;
+            height: 100px !important;  
+        }
+    }
+}
+  
+.SectionSkills {
+    .skill-item {
+        &:hover {
+            .item-icon {
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .btn {
+      width: 40%;
+    }
+    .rightBlog .card {
+      width: 45%;
+    }  
+  }
+  
+  @media screen and (max-width: 1024px) {
+  
+    .card {
+      width: auto;
+    }
+    .SectionAboutme .leftAboutme, .SectionAboutme .rightAboutme {
+      width: 45%;
+      margin: 0 20px;    
+    } 
+    .btn {
+      width: 50%;
+    }   
+  
+    .SectionBlog .leftBlog, .SectionBlog .rightBlog {
+      float: none;
+    }  
+    .SectionBlog .leftBlog {
+      width: 50%;
+      margin-bottom: 40px;
+    }
+    .SectionBlog .rightBlog .card {
+      width: 31.49%;
+    }  
+    .SectionBlog .rightBlog {
+      width: 100%;
+    }  
+    #showcase::after {
+      top: 45%;
+      right: 47%;    
+    }  
+  
+    #showcase {
+      background-image: none;
+    }  
+  
+  }
+  
+  @media screen and (max-width: 768px) {
+    #showcase::after {
+      position: static;
+    }  
+    .content-header {
+      position: relative;
+    }  
+  
+    .SectionAboutme .leftAboutme, .SectionAboutme .rightAboutme ,
+    .SectionBlog .leftBlog  {
+      width: 100%;
+    }  
+    .card {
+      width: 46%;
+    }  
+    .contain {
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex; 
+        display: flex;
+        flex-direction: column;
+    }  
+    .leftAboutme {order: 2;}
+    .rightAboutme {
+      order: 1;
+      margin-bottom: 40px !important;
+    }
+    .SectionBlog .rightBlog .card {
+      width: 47%;
+    }  
+  }
+  
+  @media screen and (max-width: 625px) {
+    .title-content {
+      font-size: 50px;
+      line-height: 60px;    
+    }
+    .body-content {
+      font-size: 17px;
+      line-height: 25px;    
+    }  
+    .rightAboutme h2, .leftBlog h2 {
+      font-size: 35px;
+    }  
+    .rightAboutme .bodytextAbout {
+      font-size: 16px;
+    } 
+    .SectionAboutme .leftAboutme, .SectionAboutme .rightAboutme, .SectionBlog .leftBlog ,
+    .card,
+    .SectionBlog .rightBlog .card{
+      width: auto;
+      margin: 0;
+    }   
+    .SectionBlog .leftBlog,
+    .rightBlog .card,
+    .card{
+      margin-bottom: 40px !important;
+  }
+  }
