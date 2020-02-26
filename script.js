@@ -1,13 +1,13 @@
-jQuery(document).ready(function () {
-  jQuery(window).scroll(function () {
+$(document).ready(function () {
+  $(window).scroll(function () {
     // check if scroll event happened
-    if (jQuery(document).scrollTop() > 130) {
+    if ($(document).scrollTop() > 130) {
       // check if user scrolled more than 50 from top of the browser window
-      jQuery(".navbar-change").css("background-color", "#F9F9F9");
+      $(".navbar-change").css("background-color", "#F9F9F9");
       // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
     } else {
-      jQuery(".navbar-change").css("background-color", "transparent");
-      jQuery(".navbar-change").css("transition", "1s");
+      $(".navbar-change").css("background-color", "transparent");
+      $(".navbar-change").css("transition", "1s");
       // if not, change it back to transparent
     }
   });
@@ -22,19 +22,19 @@ jQuery(document).ready(function () {
 
 //Nav Bar File imported to the layout.html from "../Vue/navBar.html"
 
-jQuery(function () {
+$(function () {
 
   "use strict";
-  jQuery("#navbar").load("navigationBar.html");
+  $("#navbar").load("navigationBar.html");
 
 });
 
 
 //footer Bar File imported to the layout.html from "../Vue/footerBar.html"
 
-jQuery(function () {
+$(function () {
 
   "use strict";
-  jQuery("#footerbar").load("footerNavigation.html");
+  $("#footerbar").load("footerNavigation.html");
 
 });
