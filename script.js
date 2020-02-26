@@ -1,5 +1,3 @@
-import $ from 'jquery'; 
-
 $(document).ready(function () {
   $(window).scroll(function () {
     // check if scroll event happened
