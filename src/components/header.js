@@ -1,31 +1,54 @@
-import { Link } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import React from "react"
 
 const Header = () => (
-  <header>
-    <div className="menu">
+  <StaticQuery
+    query={graphql`
+      query {
+        wordpressWpApiMenusMenusItems(name: { eq: "MainNav" }) {
+          items {
+            title
+            object_slug
+            url
+          }
+        }
+      }
+    `}
+    render={data => (
 
-      <nav className="navbar-change">
+      <header>
+        <div className="menu">
 
-        <div className="contain">
+          <nav className="navbar-change">
 
-          <div className="logo design">
+            <div className="contain">
 
-            <Link to="/">Yassine <span>Irab</span></Link>
+              <div className="logo design">
 
-          </div>
-          <div className="standard">
+                <Link to="/">Yassine <span>Irab</span></Link>
 
-            <ul>
-              <li><Link to="/story" className="link-1" title="About me">My story</Link></li><li><Link to="/Work" className="link-1" title="Portfolio">Work</Link></li><li><Link to="/Contact" className="link-1" title="Contact me">Contact</Link></li><li className="underMore"><Link to="/blogs" className="link-1" title="Blog">blog</Link></li>
-            </ul>
+              </div>
+              <div className="standard">
 
-          </div>
+                <ul>
+                  {data.wordpressWpApiMenusMenusItems.items.map(item => (
+                    <li key={item.object_slug}>
+                      <Link to={`${item.url}`} className="link-1" title="About me">
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+            </div>
+
+          </nav>
         </div>
+      </header>
 
-      </nav>
-    </div>
-  </header>
+    )}
+  />
 )
 
 export default Header

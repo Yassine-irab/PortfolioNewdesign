@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Front end web developer",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "I'm yassine irab a front end web developer living in mrocco",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Yassine Irab",
   "dependencies": {
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
@@ -23,7 +23,7 @@
     "smooth-scrollbar": "^8.5.1"
   },
   "devDependencies": {
-    "gatsby-source-wordpress": "^3.1.62",
+    "gatsby-source-wordpress": "^3.1.63",
     "gh-pages": "^2.2.0",
     "prettier": "^1.19.1"
   },

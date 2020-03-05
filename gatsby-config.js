@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/gatsby-deploy`,
   siteMetadata: {
     title: `Portfolio`,
     subtitle: `A beautiful portfolio version`,
@@ -45,6 +46,24 @@ module.exports = {
         },
         // Set to true to debug endpoints on 'gatsby build'
         verboseOutput: true,
+        perPage: 100,
+        // Set how many simultaneous requests are sent at once.
+        concurrentRequests: 10,
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+          "**/*/*/menus",
+          "**/*/*/menu-locations",
+        ],
+        excludedRoutes: [],
+        normalizer: function({ entities }) {
+          return entities
+        },        
       }
     }, 
     `gatsby-plugin-sharp`,

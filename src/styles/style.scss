@@ -10,56 +10,56 @@
 @font-face {
     font-family: "PoppinsBold";
     src: url("../fonts/Poppins/Poppins-Bold.ttf");
-}
+  }
   
-@font-face {
+  @font-face {
     font-family: "PoppinsRegular";
     src: url("../fonts/Poppins/Poppins-Regular.ttf");
-}
+  }
   
- @font-face {
+  @font-face {
     font-family: "PoppinsThin";
     src: url("../fonts/Poppins/Poppins-Thin.ttf");
-}
+  }
   
-@font-face {
+  @font-face {
     font-family: "roboto-light";
     src: url("../fonts/roboto/Roboto-Light.ttf");
-}
+  }
   
-@font-face {
+  @font-face {
     font-family: "roboto-Regular";
     src: url("../fonts/roboto/Roboto-Regular.ttf");
-}
+  }
   
-@font-face {
+  @font-face {
     font-family: "roboto-Medium";
     src: url("../fonts/roboto/Roboto-Medium.ttf");
-}
+  }
   
-@font-face {
+  @font-face {
     font-family: "roboto-Bold";
     src: url("../fonts/roboto/Roboto-Bold.ttf");
-}
+  }
   
-@font-face {
+  @font-face {
     font-family: "bigNoodleTitling";
     src: url("../fonts/bigNoodleTitling.ttf");
-}
-
-$fontBold: "PoppinsBold", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-$fontRegular: "PoppinsRegular", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-$fontlight: "roboto-light", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-$fontMedium: "roboto-Medium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-$white: #fff;
-$black: #000;
-$gray: #696969;
-$blue: #5c6ac4;
-$lightBlue: #e9ebf4;
-
-
-/*
+  }
+  
+  $fontBold: "PoppinsBold", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  $fontRegular: "PoppinsRegular", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  $fontlight: "roboto-light", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  $fontMedium: "roboto-Medium", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  $white: #fff;
+  $black: #000;
+  $gray: #696969;
+  $blue: #5c6ac4;
+  $lightBlue: #e9ebf4;
+  
+  
+  /*
   **
   ****
   *****
@@ -68,93 +68,110 @@ $lightBlue: #e9ebf4;
   ****
   **
   */
-
-* {
+  
+  * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     outline: none;
-}
-
-*::selection,
-*::-moz-selection {
+    overflow-wrap: break-word;    
+  }
+  
+  *::selection,
+  *::-moz-selection {
     background-color: #4a4a4a;
     color: $white;
-}
-
-/* width */
-::-webkit-scrollbar {
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
     width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
     background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
     background: $blue; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
     background: $blue; 
-}
-
-img {
+  }
+  
+  img {
     display: block;
     width: 100%;
     height: auto;
     position: static !important;
     overflow: hidden;
     object-fit: contain;
-}
-
-.gatsby-image-wrapper {
+  }
+  
+  .gatsby-image-wrapper {
     width: 100% !important;
-}
-.gatsby-image-wrapper picture img{
-
+  }
+  .gatsby-image-wrapper picture img{
+  
     min-height: 15rem;
     max-height: 15rem;
     background: #fff center center no-repeat;
     background-size: cover;
-
-}
-a {
+  }
+  
+  .mainsection {
+    height: calc(100vh - 243px);
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  #footer {
+    text-align: center;
+  }
+  
+  .post-single ,
+  .page-single{
+    margin-top: 10em;
+  }
+  
+  a {
     text-decoration: none;
     outline: none;
     color: $blue;
-}
-
-body {
+  }
+  
+  body {
     font-family: $fontlight;
     margin: 0;
     background: $white;
     /*opacity: 0;*/
     -webkit-transition: opacity 3s ease;
     transition: opacity 3s ease;
-}
-
-.loaded {
+  }
+  
+  .loaded {
     opacity: 1;
-}
-
-.contain {
+  }
+  
+  .contain {
     width: 85%;
     margin: 30px auto;
     height: 100%;
     display: block;
-}
+  }
   
-.clear {
+  .clear {
     content: '';
     display: table;
     clear: both;
-}
-
-.active-links {
+  }
+  
+  .active-links {
     width: 100%;
     height: 100%;
     left: 0;
@@ -162,24 +179,24 @@ body {
     background-color: #141414;
     transition: all ease 0.3s;
     color: $white !important;
-}
-
-.greyBack {
+  }
+  
+  .greyBack {
     background-color: #F9F9F9;
     overflow: hidden;
     padding: 7em 0;
   }
-
-/*
+  
+  /*
   ***
   ****
   *****                      Start stiyling the header section // Set a Image for the header
   ******                     ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
   ****
   ***
-*/
-
-.btn {
+  */
+  
+  .btn {
     padding: 20px;
     font-family: $fontMedium;
     font-size: 14px;
@@ -205,35 +222,35 @@ body {
         color: $white;
         background-color: $blue;   
     }
-}
-
-.liststyle {
+  }
+  
+  .liststyle {
     margin: 0 !important;
     padding: 0 !important;
-}
+  }
   
-.logo.design {
+  .logo.design {
     display: inline-block;
     vertical-align: middle;  
-}
-
-.standard {
+  }
+  
+  .standard {
     display: inline-block;
     vertical-align: middle;
     width: 70%;
     text-align: right;           
-}
+  }
   
-.standard {
+  .standard {
     ul {
         li {
             display: inline-block;
             list-style-type: none;
         }
     }
-}
+  }
   
-.standard {
+  .standard {
     ul {
         li {
             a {
@@ -247,9 +264,9 @@ body {
             }
         }
     }
-}
+  }
   
-.standard {
+  .standard {
     ul {
         .underMore {
             a {
@@ -260,9 +277,9 @@ body {
             }
         }
     }
-}
+  }
   
-.navbar-change {
+  .navbar-change {
     z-index: 9999;
     position: fixed;
     /* Set the navbar to fixed position */
@@ -274,9 +291,9 @@ body {
     -webkit-transition: .5s;
     -moz-transition: .5s;
     -o-transition: .5s
-}
+  }
   
-.logo {
+  .logo {
     a {
         font-family: $fontlight;
         font-size: 18px;
@@ -289,27 +306,27 @@ body {
         line-height: 20px;
         display: block;
     }
-}
-
-.logo {
+  }
+  
+  .logo {
     opacity: 1;
     transition: 1s;
-}
-
-.logo{
+  }
+  
+  .logo{
     &:hover {
         opacity: .3;
     }
-}
-
-.logo {
+  }
+  
+  .logo {
     span {
         display: block;
         font-family: $fontBold;  
     }
-}
-
-.link-1::after {
+  }
+  
+  .link-1::after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -319,23 +336,23 @@ body {
     bottom: 0;
     background-color: $blue;
     transition: all ease 0.3s;
-}
+  }
   
-.link-1 {
+  .link-1 {
     &:hover {
         color: $white !important;
     }
-}
+  }
   
-.link-1 {
+  .link-1 {
     &:hover::after {
         height: 100%;
     }
-}
-
-// Styling the main sqection Body
-
-#showcase {
+  }
+  
+  // Styling the main sqection Body
+  
+  #showcase {
     background-image: url("../images/mainImageHeader.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -347,7 +364,7 @@ body {
     position: relative;
   }
   
-#showcase {
+  #showcase {
     &::after {
         content: '';
         position: absolute;
@@ -360,18 +377,18 @@ body {
         border-radius: 36%;
         z-index: 0;
     }
-}
-
-.content-header {
+  }
+  
+  .content-header {
     display: table;
     position: absolute;
     top: 0;
     height: 100%;
     z-index: 999;
-}
-
+  }
   
-.title-content {
+  
+  .title-content {
     font-family: $fontBold;
     font-size: 90px;
     line-height: 90px;
@@ -379,9 +396,9 @@ body {
     font-weight: 900;
     color: $black;
     margin-bottom: 40px;
-}
+  }
   
-.title-content {
+  .title-content {
     &::after {
         content: '';
         display: block;
@@ -391,16 +408,16 @@ body {
         margin-top: 20px;
         border-radius: 3px;
     }
-}
+  }
   
-.content {
+  .content {
     display: table-cell;
     vertical-align: middle;
     position: relative;
     top: 40px;
-}
+  }
   
-.body-content {
+  .body-content {
     font-family: $fontlight;
     font-size: 24px;
     letter-spacing: 1px;
@@ -408,13 +425,13 @@ body {
     font-weight: 100;
     color: $gray;
     margin-bottom: 40px;
-}
+  }
   
-.btn-download {
+  .btn-download {
     margin-bottom: 40px;
-}
+  }
   
-.scrollArrow {
+  .scrollArrow {
     position: absolute;
     bottom: 30px;
     width: 25px;
@@ -423,29 +440,29 @@ body {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-}
-
-.scrollArrow .iconArrow {
+  }
+  
+  .scrollArrow .iconArrow {
     display: block;
     background-image: url("../images/BottomArrow.png");
     background-position: center;
     background-size: cover;
     width: 25px;
     height: 25px;
-}
-
-
-/*
+  }
+  
+  
+  /*
     Section about me style *****
-*/
-
-
-/* Card list here */
-/* Lazy Load Styles */
-
-.card-image {
+  */
+  
+  
+  /* Card list here */
+  /* Lazy Load Styles */
+  
+  .card-image {
     display: block;
-    min-height: 15rem;
+    /*min-height: 15rem;*/
     max-height: 15rem;
     /* layout hack */
     background: $white center center no-repeat;
@@ -453,19 +470,19 @@ body {
     opacity: 1;
     overflow: hidden;
     &:hover { opacity: .9; }
-
-}
+  
+  }
     
-.card-image {
+  .card-image {
     &> img  {
         display: block;
         width: 100%;
         opacity: 0;
         /* visually hide the img element */
     }
-}
-
-.card-image {
+  }
+  
+  .card-image {
     .is-loaded {
         -webkit-filter: none;
         filter: none;
@@ -475,10 +492,10 @@ body {
         transition: filter 1s;
         transition: filter 1s, -webkit-filter 1s;
     }
-}
-
-/* Layout Styles */
-.card-list {
+  }
+  
+  /* Layout Styles */
+  .card-list {
     display: -webkit-box; 
     display: -moz-box;
     display: -ms-flexbox;
@@ -495,9 +512,9 @@ body {
         border: 1px solid #eaeaea;
         background-color: #fff;
     }    
-}
+  }
   
-.card {
+  .card {
     display: inline-block;
     width: 40%;
     /*max-width: 11rem;*/
@@ -518,17 +535,17 @@ body {
         transform: translateY(-1px);
         -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
         box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-
+  
         .card-description {
             > p , > h2{
                 color: $white;
             }
         }   
-
-    }    
-}
   
-.card-description {
+    }    
+  }
+  
+  .card-description {
     display: block;
     color: $gray;
     text-decoration: none;
@@ -549,49 +566,49 @@ body {
         font-weight: 100;    
         color: $gray;
     }    
-}
-
+  }
   
-.card:nth-child(1):hover {
+  
+  .card:nth-child(1):hover {
     background-image: -webkit-linear-gradient(330deg,rgba(87,82,208,.6) 0%,#5752d0);
     background-image: -o-linear-gradient(330deg,rgba(87,82,208,.6) 0%,#5752d0);
     background-image: linear-gradient(120deg,rgba(87,82,208,.6) 0%,#5752d0);
     -webkit-box-shadow: 0 10px 19px 1px rgba(87,82,208,.2);
     box-shadow: 0 10px 19px 1px rgba(87,82,208,.2);  
-} 
+  } 
   
-.card:nth-child(2):hover {
+  .card:nth-child(2):hover {
     background-image: linear-gradient(120deg,rgba(222,54,24,.6) 0%,#de3618);
     box-shadow: 0 10px 19px 1px rgba(222,54,24,.2); 
-} 
+  } 
   
-.card:nth-child(3):hover {
+  .card:nth-child(3):hover {
   background-image: linear-gradient(120deg,rgba(156,106,222,.6) 0%,#9c6ade);
   box-shadow: 0 10px 19px 1px rgba(156,106,222,.2); 
-}
+  }
   
-.card:nth-child(4):hover {
+  .card:nth-child(4):hover {
   background-image: linear-gradient(120deg,rgba(71,193,191,.6) 0%,#47c1bf);
   box-shadow: 0 10px 19px 1px rgba(71,193,191,.2);
-}
+  }
   
-.SectionAboutme , .SectionBlog {
+  .SectionAboutme , .SectionBlog {
     .leftAboutme , .rightAboutme , 
     .leftBlog , .rightBlog{
         float: left;
-        width: 40%;        
+        width: 50%;        
     }
-}
-
-.SectionAboutme {
+  }
+  
+  .SectionAboutme {
     .card-image {
         min-height: 5rem;
         max-height: 5rem;
         background: transparent left center no-repeat;
     }
-}
+  }
   
-.rightAboutme , .leftBlog{
+  .rightAboutme , .leftBlog{
     h2 {
         font-family: $fontBold,arial,sans-serif;
         font-size: 40px;
@@ -607,9 +624,9 @@ body {
             border-radius: 3px;
         }        
     }
-}
+  }
   
-.rightAboutme {
+  .rightAboutme {
     .bodytextAbout {
         font-family: $fontlight;
         font-size: 18px;
@@ -623,18 +640,18 @@ body {
             font-weight: 600;
         }
     }
-}
-
-
-
-.SectionBlog {
+  }
+  
+  
+  
+  .SectionBlog {
   overflow: hidden;
   padding: 7em 0;
   .rightBlog {
     width: 50%;
     .card {
         padding: 0;
-        width: 30%;
+        width: 45%;
         &:hover {
             background-image: none !important;
         }        
@@ -647,9 +664,9 @@ body {
         } 
     }
   }
-}
-
-.leftBlog {
+  }
+  
+  .leftBlog {
     p {
         font-family: $fontlight;
         font-size: 18px;
@@ -659,9 +676,9 @@ body {
         font-weight: 100;
         color: $gray;  
     }
-}
-
-.rightBlog {
+  }
+  
+  .rightBlog {
     .card {
         &:hover {
             .card-description {
@@ -671,17 +688,17 @@ body {
             }
         }
     }
-}
-
-.SectionSkills {
+  }
+  
+  .SectionSkills {
     padding: 8em 0 5em;
     .titleSkills {
         display: inline-block;
         width: 40%;
     }
-}
+  }
   
-.skills {
+  .skills {
     .row {
         width: 100%;
         display: -webkit-box; 
@@ -695,11 +712,12 @@ body {
         overflow: hidden;
         .skill-item {
             margin: 0px 40px;
+            display: inline-block;
         }
     }
-}
-
-.SectionSkills {
+  }
+  
+  .SectionSkills {
     .skill-item {
         .item-icon {
             margin: 0 auto;
@@ -714,9 +732,9 @@ body {
             height: 100px !important;  
         }
     }
-}
+  }
   
-.SectionSkills {
+  .SectionSkills {
     .skill-item {
         &:hover {
             .item-icon {
@@ -726,40 +744,122 @@ body {
             }
         }
     }
-}
+  }
 
-@media screen and (max-width: 1500px) {
+  .blogsPages {
+      .leftBlog , .rightBlog{
+        float: none;
+        width: 100%;
+      }    
+  }
+
+.blogsPages {
+    .rightBlog {
+        .card {
+            width: 24%;
+        }
+    } 
+}
+  
+  @media screen and (max-width: 1500px) {
+    .btn-download a{
+        width: 30%;
+    }
     .btn {
-      width: 40%;
+      width: 45%;
     }
     .rightBlog .card {
       width: 45%;
     }  
+    .card-description > h2 {
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+    .card {
+        width: 85%;
+    }
+    .SectionBlog .rightBlog .card {
+        width: 47%;
+    }    
+    .skills .row {
+        display: block;
+        text-align: center;
+    }
+    .skills .row .skill-item {
+        margin: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .btn {
+        width: 25%;
+    }       
+    .navbar-change {
+        position: static;
+    }
+    #showcase::after {
+      position: static;
+    }  
+    .content-header {
+      position: relative;
+    }  
+    .content {
+        top: 5em;
+        display: block;
+    }
+    .SectionAboutme .leftAboutme, .SectionAboutme .rightAboutme ,
+    .SectionBlog .leftBlog  {
+      width: 100%;
+    }  
+    .card {
+      width: 46%;
+    }  /*
+    .contain {
+        display: -webkit-box; 
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex; 
+        display: flex;
+        flex-direction: column;
+    }*/
+    .leftAboutme {order: 2;}
+    .rightAboutme {
+      order: 1;
+      margin-bottom: 40px !important;
+    }
+    .SectionBlog .rightBlog .card {
+      width: 47%;
+    }  
+    .SectionAboutme .leftAboutme, .SectionAboutme .rightAboutme, .SectionBlog .leftBlog {
+        margin-bottom: 40px;
+    }    
+    .SectionBlog .rightBlog {
+        width: 100%;
+    }
   }
   
   @media screen and (max-width: 1024px) {
-  
+  /*
     .card {
       width: auto;
-    }
+    }*/
     .SectionAboutme .leftAboutme, .SectionAboutme .rightAboutme {
       width: 45%;
       margin: 0 20px;    
     } 
-    .btn {
+    .btn ,
+    .btn-download a{
       width: 50%;
     }   
-  
     .SectionBlog .leftBlog, .SectionBlog .rightBlog {
       float: none;
     }  
     .SectionBlog .leftBlog {
-      width: 50%;
       margin-bottom: 40px;
-    }
+    }/*
     .SectionBlog .rightBlog .card {
       width: 31.49%;
-    }  
+    }  */
     .SectionBlog .rightBlog {
       width: 100%;
     }  
@@ -771,41 +871,26 @@ body {
     #showcase {
       background-image: none;
     }  
-  
-  }
-  
-  @media screen and (max-width: 768px) {
-    #showcase::after {
-      position: static;
+    .SectionAboutme .leftAboutme, .SectionAboutme .rightAboutme {
+        width: 100%;
     }  
-    .content-header {
-      position: relative;
-    }  
-  
-    .SectionAboutme .leftAboutme, .SectionAboutme .rightAboutme ,
-    .SectionBlog .leftBlog  {
-      width: 100%;
-    }  
-    .card {
-      width: 46%;
-    }  
-    .contain {
-        display: -webkit-box; 
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex; 
-        display: flex;
-        flex-direction: column;
-    }  
-    .leftAboutme {order: 2;}
-    .rightAboutme {
-      order: 1;
+    .SectionBlog .leftBlog,
+    .rightBlog .card,
+    .card{
       margin-bottom: 40px !important;
+    } 
+    .SectionSkills {
+        padding: 8em 0 1em;
+    }     
+    #showcase {
+        height: auto;
+    }    
+    .content-header , .content{
+        position: static;
     }
-    .SectionBlog .rightBlog .card {
-      width: 47%;
-    }  
+  
   }
+  
   
   @media screen and (max-width: 625px) {
     .title-content {
@@ -827,10 +912,15 @@ body {
     .SectionBlog .rightBlog .card{
       width: auto;
       margin: 0;
-    }   
-    .SectionBlog .leftBlog,
-    .rightBlog .card,
-    .card{
-      margin-bottom: 40px !important;
+    }    
   }
+  
+  @media screen and (max-width: 425px) {
+    .standard {
+        vertical-align: top;
+        width: 79%;
+    }      
+    .standard ul li {
+        display: block;
+    }
   }
