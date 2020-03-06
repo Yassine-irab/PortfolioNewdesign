@@ -1,10 +1,10 @@
 module.exports = {
-  pathPrefix: `/gatsby-deploy`,
+  pathPrefix: `/PortfolioNewdesign`,
   siteMetadata: {
     title: `Portfolio`,
     subtitle: `A beautiful portfolio version`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@yassine`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -45,30 +45,13 @@ module.exports = {
           pass: `test123`,
         },
         // Set to true to debug endpoints on 'gatsby build'
-        verboseOutput: true,
-        perPage: 100,
-        // Set how many simultaneous requests are sent at once.
-        concurrentRequests: 10,
-        includedRoutes: [
-          "**/categories",
-          "**/posts",
-          "**/pages",
-          "**/media",
-          "**/tags",
-          "**/taxonomies",
-          "**/users",
-          "**/*/*/menus",
-          "**/*/*/menu-locations",
-        ],
-        excludedRoutes: [],
-        normalizer: function({ entities }) {
-          return entities
-        },        
+        verboseOutput: true,        
       }
     }, 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,    
     `gatsby-plugin-sass`,
+    `gatsby-plugin-transition-link`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -2,6 +2,8 @@ import React from "react"
 import Helmet from "react-helmet"
 import { graphql, Link, withPrefix } from "gatsby"
 import Img from "gatsby-image"
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
 //Import Component
@@ -31,7 +33,7 @@ const IndexPage = ({ data }) => (
 
           <h2>Blog</h2>
           <p>Publish what you think, don't put it on social media, Pofo provides a large collection of home and inner pages, carefully crafted elements, and easily customizable templates.</p>
-          <Link to="/blogs/" className="btn" title="Blog">Discover more</Link>
+          <AniLink paintDrip to="/blogs/" hex="#5c6ac4" className="btn" title="Blog">Discover more</AniLink>
 
         </div>
 
@@ -39,17 +41,17 @@ const IndexPage = ({ data }) => (
           <ul className={"card-list"}>
             {data.allWordpressPost.edges.map(post => (
               <li key={post.node.slug} className={"card"}>
-                <Link to={`/category/${post.node.categories.slug}`} className={"card-categorie"}>
+                <AniLink paintDrip to={`/category/${post.node.categories.slug}`} hex="#5c6ac4" className={"card-categorie"}>
                   <span dangerouslySetInnerHTML={{ __html: post.node.categories.name }} />
-                </Link>                
-                <Link to={`/blog/${post.node.slug}`} className={"card-image"}>
+                </AniLink>                
+                <AniLink paintDrip to={`/blog/${post.node.slug}`} hex="#5c6ac4" className={"card-image"}>
                   <Img
                     sizes={post.node.featured_media.localFile.childImageSharp.resolutions}
                     alt={post.node.title} />
-                </Link>
-                <Link to={`/blog/${post.node.slug}`} className={"card-description"}>
+                </AniLink>
+                <AniLink paintDrip to={`/blog/${post.node.slug}`} hex="#5c6ac4" className={"card-description"}>
                   <h2 dangerouslySetInnerHTML={{ __html: post.node.title }} />
-                </Link>
+                </AniLink>
                 <div className={"card-description"} dangerouslySetInnerHTML={{ __html: post.node.excerpt }} ></div>
               </li>
             ))}

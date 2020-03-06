@@ -1,5 +1,9 @@
 import { StaticQuery, graphql, Link } from "gatsby"
 import React from "react"
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
+
 
 const Header = () => (
   <StaticQuery
@@ -25,7 +29,7 @@ const Header = () => (
 
               <div className="logo design">
 
-                <Link to="/">Yassine <span>Irab</span></Link>
+                <AniLink paintDrip to="/" hex="#5c6ac4">Yassine <span>Irab</span></AniLink>
 
               </div>
               <div className="standard">
@@ -33,9 +37,9 @@ const Header = () => (
                 <ul>
                   {data.wordpressWpApiMenusMenusItems.items.map(item => (
                     <li key={item.object_slug}>
-                      <Link to={`${item.url}`} className="link-1" title="About me">
+                      <AniLink paintDrip to={`${item.url}`} hex="#5c6ac4" className="link-1" title="About me">
                         {item.title}
-                      </Link>
+                      </AniLink>
                     </li>
                   ))}
                 </ul>
