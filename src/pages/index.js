@@ -1,8 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
-import { graphql, Link, withPrefix } from "gatsby"
+import { graphql, withPrefix } from "gatsby"
 import Img from "gatsby-image"
-import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
@@ -37,7 +36,7 @@ const IndexPage = ({ data }) => (
 
         </div>
 
-        <div className="rightBlog">
+        <article className="rightBlog">
           <ul className={"card-list"}>
             {data.allWordpressPost.edges.map(post => (
               <li key={post.node.slug} className={"card"}>
@@ -56,7 +55,7 @@ const IndexPage = ({ data }) => (
               </li>
             ))}
           </ul>
-        </div>
+        </article>
 
       </div>
     </div>
@@ -85,7 +84,7 @@ query {
               featured_media {
                   localFile {
                     childImageSharp {
-                      resolutions {
+                      resolutions(width: 1500, height: 1500) {
                         src
                         width
                         height

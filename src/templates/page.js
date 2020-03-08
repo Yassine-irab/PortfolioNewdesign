@@ -8,7 +8,6 @@ import SEO from "../components/seo"
 class PageTemplate extends Component {
     render() {
         const page = this.props.data.wordpressPage;
-        const siteMetadata = this.props.data.site.siteMetadata
         const currentPage = this.props.data.wordpressPage
 
         console.log(currentPage)

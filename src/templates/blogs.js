@@ -1,8 +1,6 @@
 import React, { Component } from "react"
-import Link from "gatsby-link"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
-import TransitionLink from "gatsby-plugin-transition-link"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 //Import Component
@@ -28,7 +26,7 @@ class BlogsTemplate extends Component {
                                 <p>Publish what you think, don't put it on social media, Pofo provides a large collection of home and inner pages, carefully crafted elements, and easily customizable templates.</p>
 
                             </div>
-                            <div className={"rightBlog"}>
+                            <article className={"rightBlog"}>
                                 <ul className={"card-list"}>
                                     {data.allWordpressPost.edges.map(({ node }) => (
                                         <li key={node.slug} className={"card"}>
@@ -45,7 +43,7 @@ class BlogsTemplate extends Component {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </article>
                             <div className="clear"></div>
                         </div>
                     </div>
@@ -74,7 +72,7 @@ export const pageQuery = graphql`
                     featured_media {
                         localFile {
                           childImageSharp {
-                            resolutions {
+                            resolutions(width: 1500, height: 1500) {
                               src
                               width
                               height
