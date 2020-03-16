@@ -1,4 +1,7 @@
 import React from 'react';
+import dataBanner from '../databanner.json';
+import Skeleton from 'react-loading-skeleton';
+
 
 const Banner = () => {
 
@@ -11,14 +14,13 @@ const Banner = () => {
           <div className="content">
   
               <div className="title-content">
-  
-                <div>Front-end</div> web Developer
+                <div>{dataBanner.titlecontentfirst || <Skeleton />}</div> <div>{dataBanner.titlecontentsecond || <Skeleton />}</div>
   
               </div>
   
               <div className="body-content">
   
-                <div>I love connecting brands and companies with their customers </div> through good design, I can help you.           
+                <div>{dataBanner.bodycontentfirst|| <Skeleton />}</div> <div>{dataBanner.bodycontentsecond || <Skeleton />}</div>.           
   
               </div>
               
@@ -26,7 +28,7 @@ const Banner = () => {
                   
                   <a href="/" className="btn" title="My Resume" download="Work/cv.rar">
                   
-                    Contact Me
+                  Contact Me
                   
                   </a>
                   

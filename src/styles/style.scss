@@ -112,9 +112,16 @@
     object-fit: contain;
   }
 
-  h1 , h2{
+  h3{
     font-family: $fontBold;
     color: $black;
+    font-size: 28px;
+    line-height: 40px;
+    text-transform: capitalize;
+    font-weight: 100;
+    color: #2d2d2d;
+    padding-bottom: 40px;
+    max-width: 75%;
   }
 
   h1 {
@@ -563,9 +570,9 @@
     color: $gray;
     text-decoration: none;
     &> h2 {
-        font-family: $fontRegular;
+        font-family: $fontBold;
         letter-spacing: 1px;
-        line-height: 35px;
+        line-height: 30px;
         font-size: 18px;
         font-weight: 600;
         color: $black;
@@ -673,7 +680,7 @@
         padding: 20px;
         /*min-height: 8em;*/
         &> h2 {
-            line-height: 25px;
+            line-height: 30px;
         } 
     }
   }
@@ -769,7 +776,7 @@
 .blogsPages {
     .rightBlog {
         .card {
-            width: 24%;
+            width: 47%;
         }
     } 
 }
@@ -778,13 +785,18 @@
   .post-header {
     h2 {
       font-family: $fontBold;
-      font-size: 40px;
-      line-height: 50px;
+      font-size: 50px;
+      line-height: 65px;
       text-transform: capitalize;
       font-weight: 100;
-      max-width: 75%;
+      max-width: 80%;
       color: $black;    
-      padding-bottom: 15px;
+      padding-bottom: 10px;
+    }
+    .post-meta {
+      color: #5c6ac4;
+      font-size: 15px;
+      letter-spacing: 1px;
     }
   }
 }
@@ -794,7 +806,7 @@
     .gatsby-image-wrapper {
       picture {
         img {
-          max-height: 35em;
+          max-height: 40em;
         }
       }
     }
@@ -820,11 +832,71 @@
 }
 
 .contentContain {
-  width: 66%;
+  width: 45%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding-top: 40px;
 }
 
+.contentContain {
+  p {
+    padding-bottom: 40px;
+  }
+}
+
+.blogsPages {
+  .contain {
+    width: 60%;
+  }
+}
+
+  
+.blogsPages {
+  .leftBlog {
+    max-width: 38rem;
+    margin: 10em 0;    
+    p {
+        font-family: $fontlight;
+        font-size: 18px;
+        margin-bottom: 40px;
+        max-width: none;
+        line-height: 30px;
+        font-weight: 100;
+        color: $gray;  
+    }
+  }
+}
+
+.gobackBtn {
+  margin-bottom: 40px;
+  a {
+    width: 50%;
+  }
+}
+
+.blogsPages {
+  .rightBlog {
+    .card-image {
+      max-height: 20rem;
+    }
+  }
+}
+
+.blogsPages {
+  .rightBlog {
+    .gatsby-image-wrapper {
+      picture {
+        img {
+          max-height: 20rem;
+        }
+      }
+    }
+  }
+}
+
+.blogsPages .gatsby-image-wrapper > img ,
+.homemain .gatsby-image-wrapper img{
+  position: absolute !important;
+}
 
   @media screen and (max-width: 1500px) {
     .btn-download a{
@@ -949,13 +1021,51 @@
     }     
     #showcase {
         height: auto;
+        margin: 10em 0 8em;        
     }    
     .content-header , .content{
         position: static;
     }
-  
+    .SectionBlog .rightBlog .card {
+      width: 100%;
+    }    
+    .contentContain {
+      width: 60%;
+    }
+    .gobackBtn {
+      a {
+        width: 100%;
+      }
+    }  
+    .rightBlog .card-image{
+      max-height: 20rem;
+    }
+    
+    .rightBlog .gatsby-image-wrapper picture img{
+      max-height: 20rem;
+    }      
+
   }
   
+  @media screen and (max-width: 768px) {
+    .blogsPages .contain {
+      width: 85%;
+    }    
+    .contentContain {
+      width: 85%;
+    }  
+    .post-single .post-header h2{
+      font-size: 35px;
+      line-height: 55px;
+      max-width: 100%;
+    }  
+
+    h3 {
+      max-width: 100%;
+      font-size: 25px;
+      line-height: 45px;      
+    }
+  }
   
   @media screen and (max-width: 625px) {
     .title-content {
@@ -978,6 +1088,9 @@
       width: auto;
       margin: 0;
     }    
+    .post-single .post-header h2 {
+      max-width: 100%;
+    }    
   }
   
   @media screen and (max-width: 425px) {
@@ -988,4 +1101,7 @@
     .standard ul li {
         display: block;
     }
+    .btn, .btn-download a {
+      width: 65%;
+    }    
   }

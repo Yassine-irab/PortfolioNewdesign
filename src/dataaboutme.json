@@ -1,0 +1,15 @@
+{
+    "id": 1,
+    
+    "developementcardtitle": "Development",
+    "developementcarddescription": "Development of websites under WordPress, and front end frameworks",
+
+    "webdesigncardtitle": "Web design",
+    "webdesigncarddescription": "Creation of unique, creative designs, adapted to different media",
+
+    "ergonomicscardtitle": "Ergonomics",
+    "Ergonomicscarddescription": "Creation of interfaces designed to optimize the user experience",
+
+    "seocardtitle": "SEO",
+    "seocarddescription": "Optimization of the code and content of your website"        
+}

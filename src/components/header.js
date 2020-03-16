@@ -28,9 +28,10 @@ const Header = () => (
 
               <div className="logo design">
 
-                <AniLink paintDrip to="/" hex="#5c6ac4">Yassine <span>Irab</span></AniLink>
+                <AniLink to="/" hex="#5c6ac4">Yassine <span>Irab</span></AniLink>
 
               </div>
+              {/*
               <div className="standard">
 
                 <ul>
@@ -44,6 +45,7 @@ const Header = () => (
                 </ul>
 
               </div>
+                  */}
             </div>
 
           </nav>

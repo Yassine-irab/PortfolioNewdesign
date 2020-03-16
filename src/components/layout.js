@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import '../../fontawesome/css/font-awesome.min.css'; 
 
 //Import Component
 import Header from "./header"
@@ -25,8 +26,8 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+      <>    
+      <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>
           <div id="footer">
