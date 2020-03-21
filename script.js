@@ -10,8 +10,5 @@ jQuery(document).ready(function () {
         jQuery(".navbar-change").css("transition", "1s");
         // if not, change it back to transparent
       }
-    });   
-    setTimeout(function(){ 
-      jQuery('.gooey').fadeOut();
-    }, 3000);
+    });
 });
