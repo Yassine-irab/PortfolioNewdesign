@@ -5,6 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import dataBlogs from '../datablogs.json';
 import Skeleton from 'react-loading-skeleton';
 
+import Icon from "../assets/dots.svg";
 
 //Import Component
 import Layout from "../components/layout"
@@ -36,13 +37,18 @@ const BlogsTemplate = ({data}) => {
                                                 }
                                             </AniLink>
                                             <AniLink to={'blog/' + node.slug} hex="#5c6ac4" className={"card-description"}>
-                                                <h2>{node.title || <Skeleton />}</h2>
+                                                <h2>{node.title}</h2>
                                             </AniLink>
                                             <div className={"card-description"} dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
-                                            {node.date || <Skeleton />}
+                                            {node.date}
                                         </li>
                                     ))}
-                                </ul>
+                                <div className="outerDotsBox blogs">
+                                    <div className="dotsBox">
+                                        <Icon />
+                                    </div>
+                                </div>                                     
+                                </ul>                                
                             </article>
                             <div className="clear"></div>
                         </div>
@@ -62,7 +68,7 @@ export default BlogsTemplate
 
 export const pageQuery = graphql`
     query postsQuery{
-        allWordpressPost (sort: { fields: [date] }, filter: { status: { eq: "publish" } }){
+        allWordpressPost (sort: { fields: [date] }, filter: { status: { eq: "publish" } }) {
             edges{
                 node{
                     id
@@ -71,7 +77,7 @@ export const pageQuery = graphql`
                     featured_media {
                         localFile {
                           childImageSharp {
-                            fixed(width: 1500, height: 1500, quality: 100) {
+                            fixed(width: 1500, height: 1500, quality: 100){
                                 src
                                 width
                                 height

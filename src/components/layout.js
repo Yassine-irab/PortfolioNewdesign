@@ -7,14 +7,17 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, withPrefix } from "gatsby"
 import '../../fontawesome/css/font-awesome.min.css'; 
+import Helmet from "react-helmet"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 //Import Component
 import Header from "./header"
 import '../styles/style.scss'
 
 const Layout = ({ children }) => (
+  <>
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -25,22 +28,40 @@ const Layout = ({ children }) => (
         }
       }
     `}
+    
     render={data => (
       <>    
       <Header siteTitle={data.site.siteMetadata.title} />
         <div>
+          <div className="gooey">
+            <span className="dot"></span>
+            <div className="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>          
           <main>{children}</main>
           <div id="footer">
-          <footer className="greyBack">
-            © {new Date().getFullYear()}, All rights reserved . 
+          <footer>
+            <span> © {new Date().getFullYear()}, All rights reserved</span>
+            <span>.</span>
             {` `}
-            <a href="https://www.gatsbyjs.org">Yassine Irab</a>
+            <span><AniLink to="/">Yassine Irab</AniLink></span>
+            <div className="social-link">
+
+            </div>
           </footer>
           </div>
         </div>
+        <Helmet>
+        <script src={withPrefix('../static/jquery.js')} type="text/javascript" ></script>
+        <script src={withPrefix('../static/script.js')} type="text/javascript" ></script>
+        </Helmet>
       </>
     )}
   />
+  </>
 )
 
 Layout.propTypes = {

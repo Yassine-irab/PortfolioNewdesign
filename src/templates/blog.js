@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import Skeleton from 'react-loading-skeleton';
 
 //Import Component
 import Layout from "../components/layout"
@@ -17,8 +16,7 @@ class Blog extends Component {
       <>
         <Layout>
           <SEO
-            title={blog.title}
-            description={blog.excerpt}
+            title={blog.title} description={blog.excerpt}
           />
           <div className="mainsection">
               <article className="post-single">
@@ -26,14 +24,13 @@ class Blog extends Component {
                 <header className="post-header">
                   <div className="post-thumbnail">
                     <Img
-                      sizes={blog.featured_media.localFile.childImageSharp.fixed || <Skeleton />}
-                      alt={blog.title}
+                      sizes={blog.featured_media.localFile.childImageSharp.fixed} alt={blog.title}
                     />
                   </div>
                   <div className="contain contentContain">
-                    <h2>{blog .title || <Skeleton count={2}/>}</h2>
+                    <h2>{blog.title}</h2>
                     <div className="post-meta">
-                      <p> Written by {blog.author.name || <Skeleton />} on {blog.date || <Skeleton />}</p>
+                      <p> Written by {blog.author.name} on {blog.date}</p>
                     </div>
                   </div>                                    
                 </header>

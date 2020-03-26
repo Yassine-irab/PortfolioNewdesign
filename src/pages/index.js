@@ -1,11 +1,11 @@
 import React from "react"
-import Helmet from "react-helmet"
-import { graphql, withPrefix } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Skeleton from 'react-loading-skeleton';
 import dataBlogs from '../datablogs.json';
 
+import Icon from "../assets/dots.svg";
 
 //Import Component
 import Banner from "../components/banner"
@@ -13,6 +13,7 @@ import Aboutme from "../components/aboutme"
 import Skills from "../components/skills"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Portfolio from "../components/portfolio"
 
 
 
@@ -26,6 +27,7 @@ const IndexPage = ({ data }) => (
     </div>
     <Aboutme />
     <Skills />
+    <Portfolio />
 
     <div className="SectionBlog homemain">
       <div className="contain">
@@ -44,7 +46,7 @@ const IndexPage = ({ data }) => (
               <li key={post.node.slug} className={"card"}>              
                 <AniLink to={`/blog/${post.node.slug}`} hex="#5c6ac4" className={"card-image"}>
                   <Img
-                    sizes={post.node.featured_media.localFile.childImageSharp.fixed || <Skeleton /> }
+                    sizes={post.node.featured_media.localFile.childImageSharp.fixed}
                     alt={post.node.title} />
                 </AniLink>
                 <AniLink to={`/blog/${post.node.slug}`} hex="#5c6ac4" className={"card-description"}>
@@ -54,14 +56,17 @@ const IndexPage = ({ data }) => (
               </li>
             ))}
           </ul>
+  
+          <div className="outerDotsBox banner">
+                <div className="dotsBox">
+                    <Icon />
+                </div>
+          </div>          
         </article>
 
       </div>
     </div>
-    <Helmet>
-      <script src={withPrefix('/jquery.min.js')} type="text/javascript" />
-      <script src={withPrefix('/script.js')} type="text/javascript" />
-    </Helmet>
+
   </Layout>
 )
 

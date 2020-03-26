@@ -10,9 +10,9 @@ const Banner = () => {
         <div className="contain">
 
         <div className="content-header">
-  
+
           <div className="content">
-  
+
               <div className="title-content">
                 <div>{dataBanner.titlecontentfirst || <Skeleton />}</div> <div>{dataBanner.titlecontentsecond || <Skeleton />}</div>
   

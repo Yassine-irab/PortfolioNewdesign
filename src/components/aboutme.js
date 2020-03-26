@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Skeleton from 'react-loading-skeleton';
 
@@ -6,6 +6,8 @@ import dataAboutme from '../dataaboutme.json';
 
 
 /* Importa images */
+import Icon from "../assets/blue-dots.svg";
+
 import webDevelopment from '../images/web-development.png'
 import webDesign from '../images/web-design.png'
 import uxUi from '../images/ux-ui.png'
@@ -15,6 +17,12 @@ const Aboutme = () => {
     return (
         
         <div className="SectionAboutme greyBack">
+            <div className="outerDotsBox">
+                <div className="dotsBox">
+                    <Icon />
+                </div>
+            </div>
+
             <div className="contain">
             <div className="leftAboutme">
 
@@ -22,7 +30,6 @@ const Aboutme = () => {
 
                     <li className="card">
                         <AniLink to="/" hex="#5c6ac4" className="card-image" style={{backgroundImage: `url(${webDevelopment})`, backgroundSize: '50px' }}>
-                            <img src="images/web-development.png" alt="html skills" />
                         </AniLink>
                         <AniLink to="/" hex="#5c6ac4" className="card-description" href="#">
                         <h2>{dataAboutme.developementcardtitle || <Skeleton />}</h2>
@@ -36,7 +43,6 @@ const Aboutme = () => {
 
                     <li className="card">
                         <AniLink to="/" hex="#5c6ac4" className="card-image" href="#" style={{backgroundImage: `url(${webDesign})`, backgroundSize: '50px' }}>
-                            <img src="images/web-design.png" alt="css skills" />
                         </AniLink>
                         <AniLink to="/" hex="#5c6ac4" className="card-description" href="#">
                         <h2>{dataAboutme.webdesigncardtitle || <Skeleton />}</h2>
@@ -50,7 +56,6 @@ const Aboutme = () => {
 
                     <li className="card">
                         <AniLink to="/" hex="#5c6ac4" className="card-image" href="#" style={{backgroundImage: `url(${uxUi})`, backgroundSize: '50px' }}>
-                            <img src="images/ux-ui.png" alt="bootstrap skills" />
                         </AniLink>
                         <AniLink to="/" hex="#5c6ac4" className="card-description" href="#">
                         <h2>{dataAboutme.ergonomicscardtitle || <Skeleton />}</h2>
@@ -64,7 +69,6 @@ const Aboutme = () => {
 
                     <li className="card">
                         <AniLink to="/" hex="#5c6ac4" className="card-image" href="#" style={{backgroundImage: `url(${seo})`, backgroundSize: '50px'}}>
-                            <img src="images/seo.png" alt="Photoshop skills" />
                         </AniLink>
                         <AniLink to="/" hex="#5c6ac4" className="card-description" href="#">
                         <h2>{dataAboutme.seocardtitle || <Skeleton />}</h2>
@@ -91,8 +95,8 @@ const Aboutme = () => {
                 <i className="fa fa-download"></i> Download Cv
                 
                 </AniLink>
-                </div>
-                </div>
+                </div>              
+            </div>
             </div>      
             </div>
 

@@ -1,0 +1,30 @@
+<svg width="1000" height="302" viewBox="0 0 1000 302" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="554.763" cy="187.859" r="16.4148" fill="#6371DD"/>
+<circle cx="260.209" cy="99.4004" r="10.0313" fill="#6371DD"/>
+<circle cx="907.681" cy="201.538" r="10.0313" fill="#FF7E61"/>
+<circle cx="666.019" cy="114.903" r="10.9432" fill="#A4C852"/>
+<circle cx="337.723" cy="222.513" r="30.0058" stroke="#A4C852" stroke-width="2"/>
+<path d="M352.769 33.2621C388.364 46.3695 406.594 85.8508 393.487 121.446" stroke="#FF7E61" stroke-width="4"/>
+<circle cx="883.971" cy="103.048" r="12.679" stroke="#FF7E61" stroke-width="2"/>
+<rect x="733.502" y="228.243" width="44.2153" height="44.2153" rx="4" transform="rotate(-45 733.502 228.243)" fill="#6371DD"/>
+<rect x="157.16" y="191.766" width="44.2153" height="44.2153" rx="4" transform="rotate(-45 157.16 191.766)" fill="#A4C852"/>
+<path d="M554.51 21.4326C555.881 20.7333 557.496 21.7811 557.416 23.3186L554.486 79.4947C554.406 81.0322 552.691 81.9063 551.4 81.0681L504.215 50.4429C502.923 49.6047 503.023 47.6828 504.395 46.9835L554.51 21.4326Z" fill="#974B8C"/>
+<g clip-path="url(#clip0)">
+<path d="M14.96 204.4L19.2191 233.86L48.8759 236.322" stroke="#FF7E61" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48.8759 236.322L53.135 265.782L82.7985 268.25" stroke="#FF7E61" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M82.7986 268.25L86.9731 297.147" stroke="#FF7E61" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g clip-path="url(#clip1)">
+<path d="M997.636 208.7L968.6 215.251L968.467 245.01" stroke="#FF7E61" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M968.467 245.01L939.43 251.561L939.291 281.327" stroke="#FF7E61" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M939.291 281.327L910.81 287.75" stroke="#FF7E61" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="118.745" height="21.3133" fill="white" transform="translate(14.9148 202.449) rotate(43.2649)"/>
+</clipPath>
+<clipPath id="clip1">
+<rect width="118.745" height="21.3133" fill="white" transform="translate(999.578 208.503) rotate(128.777)"/>
+</clipPath>
+</defs>
+</svg>
