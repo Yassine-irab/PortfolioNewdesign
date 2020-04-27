@@ -16,9 +16,9 @@ class Portfolio extends Component {
                             <h2>Portfolio</h2>
                             <div className="card">
                                 <div>
-                                    <a href="/">
+                                    <a href="/" target="_blank">
                                         <Icon />
-                                        <h4>Project</h4>
+                                        <h4>lausanne-resonne</h4>
                                         <p>Development of websites under WordPress, and front end frameworks</p>
                                     </a>
                                 </div>
@@ -28,36 +28,24 @@ class Portfolio extends Component {
                         <div className="column">
                             <div className="card">
                                 <div>
-                                    <a href="/">
+                                    <a href="https://github.com/Yassine-irab/PortfolioNewdesign" target="_blank">
                                         <Icon />
-                                        <h4>Project</h4>
+                                        <h4>Latest Portfolio Design</h4>
                                         <p>Development of websites under WordPress, and front end frameworks</p>
                                     </a>
                                 </div>
                             </div>
                             <div className="card">
                                 <div>
-                                    <a href="/">
+                                    <a href="https://github.com/Yassine-irab/CodingChallenge" target="_blank">
                                         <Icon />
-                                        <h4>Project</h4>
+                                        <h4>Challenge Code</h4>
                                         <p>Development of websites under WordPress, and front end frameworks</p>
                                     </a>
                                 </div>
                             </div>
                         </div>
-
-                        <div className="column">
-                            <div className="empty"></div>
-                            <div className="card">
-                                <div>
-                                    <a href="/">
-                                        <Icon />
-                                        <h4>Project</h4>
-                                        <p>Development of websites under WordPress, and front end frameworks</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        
                         </div>
 
                     </div>

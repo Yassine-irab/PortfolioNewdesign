@@ -364,7 +364,7 @@
   
   .navbar-change {
     z-index: 9999;
-    position: fixed;
+    position: absolute;
     /* Set the navbar to fixed position */
     top: 0;
     /* Position the navbar at the top of the page */
@@ -720,10 +720,15 @@
         font-weight: 100;
         color: $gray;
         p {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         a {
             font-weight: 600;
+            padding: 5px;
+            margin-right: 10px;
+          i {
+            font-size: 24px;
+          }         
         }
     }
   }
@@ -1062,6 +1067,15 @@
   }
 }
 
+.Title {
+  height: 90px;
+  overflow: hidden;
+}
+.TitleText {
+  height: 34px;
+  overflow: hidden;  
+}
+
   @media screen and (max-width: 1500px) {
     .btn-download a{
         width: 30%;
@@ -1257,6 +1271,10 @@
     .portfolioSection .row .column {
       max-width: 100%;
       width: 100%;
+      padding: 0;
+    }
+    .Title {
+      font-size: 70px;
     }
   }
   
@@ -1284,6 +1302,10 @@
     .post-single .post-header h2 {
       max-width: 100%;
     }    
+    .Title {
+      height: 70px;
+      font-size: 55px;
+    }
   }
   
   @media screen and (max-width: 425px) {
@@ -1307,5 +1329,14 @@
     .outerDotsBox.blogs {
       right: -7%;
       top: -1%;      
+    }  
+    .Title {
+      height: 55px;
+      font-size: 35px;
     }   
+    .TitleText {
+      height: 51px;
+      overflow: hidden;
+      font-size: 16px;
+    }      
   }

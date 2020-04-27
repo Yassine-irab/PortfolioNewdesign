@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import dataBanner from '../databanner.json';
 import Skeleton from 'react-loading-skeleton';
-
+import { gsap } from "gsap";
 
 const Banner = () => {
+
+  useEffect(() => {
+    gsap.from([".firstTitle",".secondTitle"], {
+      delay: 0.4,
+      ease: "power3.out",
+      y: 80,
+      stagger: {
+        amount: 0.15
+      }
+    });
+  }, [".firstTitle",".secondTitle"]);
 
   return (
     <div>
@@ -13,31 +24,38 @@ const Banner = () => {
 
           <div className="content">
 
-              <div className="title-content">
-                <div>{dataBanner.titlecontentfirst || <Skeleton />}</div> <div>{dataBanner.titlecontentsecond || <Skeleton />}</div>
-  
+              <div className="title-content titleContenthidden">
+                <div className="Title">
+                  <div className="firstTitle"><p>{dataBanner.titlecontentfirst || <Skeleton />}</p></div>
+                </div>
+                <div className="Title">
+                  <div className="secondTitle"><p>{dataBanner.titlecontentsecond || <Skeleton />}</p></div>
+                </div>
               </div>
-  
+
               <div className="body-content">
-  
-                <div>{dataBanner.bodycontentfirst|| <Skeleton />}</div> <div>{dataBanner.bodycontentsecond || <Skeleton />}</div>.           
-  
+                <div className="TitleText">
+                  <div className="firstTitle">{dataBanner.bodycontentfirst|| <Skeleton />}</div>
+                </div>
+                <div className="TitleText">
+                  <div className="secondTitle">{dataBanner.bodycontentsecond || <Skeleton />}</div>
+                </div>
               </div>
-              
+
               <div className="btn-download">
-                  
-                  <a href="/" className="btn" title="My Resume" download="Work/cv.rar">
-                  
-                  Contact Me
-                  
+
+                  <a href="#" className="btn" title="My Resume" download="http://localhost/wordpress/wp-content/uploads/2020/04/NewResumeYassine.pdf">
+
+                  Download Cv
+
                   </a>
-                  
+
               </div>
-  
+
           </div>    
   
         </div>
-  
+
       </div>
 
       <div className="clear"></div>  

@@ -18,7 +18,6 @@ import Portfolio from "../components/portfolio"
 
 
 const IndexPage = ({ data }) => (
-
     <Layout>
 
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Skeleton from 'react-loading-skeleton';
 
@@ -86,15 +87,16 @@ const Aboutme = () => {
                 <h2>About me</h2>
                 <div className="bodytextAbout">
                 <p>
-                    I'm <AniLink to="/" hex="#5c6ac4" href="about">yassine irab</AniLink> a front end web developer living in mrocco. Ihave 23 years with over 2 years of work experience
-                    Fluent in HTML/ CSS/ Boostrap/ Photoshop/ Adobe XD. -- <AniLink to="/" hex="#5c6ac4" href="portfolio">My Work</AniLink>.
-                    My passion is user experience and creating real business value. I want to work with you on improving your business by creating software that works for you.                      
+                I'm a Front-End web developer. I have 25 years with over 3+ years of work experience. I can create any type of website Business, E-commerce, Portfolio, Dating, Personal Blog, and so many more...<br />
+                I know the importance of on-line Business and assure prompt Response, 24/7 Availability, On-time Delivery, Fast Turn Around, Unlimited Revisions, and excellent communication provide me a chance. so, I can fulfill your requirements.<br />
+                I love connecting brands and companies with their customers through good design. My passion is user experience and creating real business value. I want to work with you on improving your business by creating software that works for you.                
+                <br /><br />I am seeking for a long-term cooperation with the customer and striving my best to fulfill the requirement of every customer.                      
                 </p>
-                <AniLink to="/" hex="#5c6ac4" href="/" className="btn" title="My Resume" download="Work/cv.rar">
-                        
-                <i className="fa fa-download"></i> Download Cv
-                
-                </AniLink>
+                <p>
+                    <a href="https://www.linkedin.com/in/yassine-irab/" target="_blank"><i className="fa fa-linkedin"></i></a>
+                    <a href="https://www.behance.net/yassineirab" target="_blank"><i className="fa fa-behance-square"></i></a>
+                    <a href="https://github.com/Yassine-irab" target="_blank"><i className="fa fa-github-square"></i></a>
+                </p>
                 </div>              
             </div>
             </div>      

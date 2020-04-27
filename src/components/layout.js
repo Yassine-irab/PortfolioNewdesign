@@ -12,11 +12,14 @@ import '../../fontawesome/css/font-awesome.min.css';
 import Helmet from "react-helmet"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
+
+
 //Import Component
 import Header from "./header"
 import '../styles/style.scss'
 
 const Layout = ({ children }) => (
+
   <>
   <StaticQuery
     query={graphql`
@@ -30,7 +33,9 @@ const Layout = ({ children }) => (
     `}
     
     render={data => (
-      <>    
+      
+      <>
+      <div className="layoutContainer">
       <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <div className="gooey">
@@ -58,6 +63,7 @@ const Layout = ({ children }) => (
         <script src={withPrefix('../static/jquery.js')} type="text/javascript" ></script>
         <script src={withPrefix('../static/script.js')} type="text/javascript" ></script>
         </Helmet>
+        </div>
       </>
     )}
   />
