@@ -4,7 +4,7 @@ module.exports = {
     title: `Portfolio`,
     subtitle: `A beautiful portfolio version`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    siteUrl: `https://www.example.com`,
+    siteUrl: `http://yassine-irab.me/`,
     author: `@yassine`,
   },
   plugins: [
@@ -67,17 +67,13 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'localhost/wordpress',
+        baseUrl: 'yassine-irab.me/',
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
         protocol: 'http',
         // Use 'Advanced Custom Fields' Wordpress plugin
         useACF: false,
-        auth: {
-          user: `test`,
-          pass: `test123`,
-        },
         // Set to true to debug endpoints on 'gatsby build'
         verboseOutput: true,        
       }

@@ -44,7 +44,7 @@ const Banner = () => {
 
               <div className="btn-download">
 
-                  <a href="#" className="btn" title="My Resume" download="http://localhost/wordpress/wp-content/uploads/2020/04/NewResumeYassine.pdf">
+                  <a href="#" className="btn" title="My Resume" download="http://yassine-irab.me/wp-content/uploads/2020/04/LatestVersion-of-english-resume.pdf">
 
                   Download Cv
 
