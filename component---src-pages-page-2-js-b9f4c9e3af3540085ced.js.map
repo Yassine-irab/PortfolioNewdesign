@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/page-2.js"],"names":["SecondPage"],"mappings":"2FAAA,gCAMeA,UAJI,kBACnB","file":"component---src-pages-page-2-js-b9f4c9e3af3540085ced.js","sourcesContent":["import React from \"react\"\r\n\r\nconst SecondPage = () => (\r\n<p>page 2</p>\r\n)\r\n\r\nexport default SecondPage\r\n"],"sourceRoot":""}
