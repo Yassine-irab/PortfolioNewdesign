@@ -62,6 +62,7 @@ const Layout = ({ children }) => (
         <Helmet>
         <script src={withPrefix('../static/jquery.js')} type="text/javascript" ></script>
         <script src={withPrefix('../static/script.js')} type="text/javascript" ></script>
+        <script data-ad-client="ca-pub-8120214404020974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Helmet>
         </div>
       </>
